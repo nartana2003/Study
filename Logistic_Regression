@@ -1,0 +1,78 @@
+import numpy as np
+import pandas as pd
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score,confusion_matrix
+from sklearn.linear_model import LogisticRegression
+
+import os
+for dirname,_,filenames in os.walk('/kaggle/input'):
+    for filename in filenames:
+        print(os.path.join(dirname,filename))
+/kaggle/input/titanic/train.csv
+/kaggle/input/titanic/test.csv
+/kaggle/input/titanic/gender_submission.csv
+#load the data 
+train_data = pd.read_csv('/kaggle/input/titanic/train.csv')
+
+print (len(train_data))
+
+#data information
+train_data.info()
+
+#finding missing values
+train_data.isnull().sum()
+
+
+
+#Fill missing values in Age with median
+train_data["Age"] = train_data["Age"].fillna(train_data["Age"].median())
+
+
+#drop cabin because of too many missing values 
+train_data =train_data.drop(columns=["Cabin"])
+
+#find most common value in embarked 
+train_data["Embarked"] = train_data["Embarked"].fillna(train_data["Embarked"].mode()[0])
+
+
+train_data.head()
+
+
+#Convert sex to numeric (0=female,1=male)
+train_data["Sex"] = train_data["Sex"].map({'female':0,'male':1})
+
+train_data.head()
+
+#change Embarked
+train_data["Embarked"] = train_data["Embarked"]. map({"S":0, "C":1, "Q":2})
+
+train_data.head()
+
+
+x = train_data[['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked']]
+y = train_data['Survived']
+
+x_train,x_test,y_train,y_test= train_test_split(x,y, test_size =0.30 , random_state = 40)
+
+
+scaler = StandardScaler()
+
+x_train = scaler.fit_transform(x_train)
+x_test = scaler.transform(x_test)
+
+logreg = LogisticRegression()
+
+#Train  the model on training data 
+logreg.fit(x_train,y_train)
+
+#Make predictions on test set
+y_pred =logreg.predict(x_test)
+
+accuracy = accuracy_score(y_test,y_pred)
+
+print(f"{accuracy*100}%")
+
+matrix = confusion_matrix (y_test,y_pred)
+print(matrix)
