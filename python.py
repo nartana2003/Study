@@ -31,9 +31,15 @@ for i in range(start,end, -1):
 
 #Lists
 
-(i)list.count(x)- counts the number of times an element appears in the list
+(i)list.count(x)- counts the number of times an element appears in the list 
 
 (ii)list.append(x)-adds a single element to the list at a time
 
 (iii)list.extend(x+y)-adds multiple elements to a list at a time
+
+(iv)list.sort()-sorts list in ascending order. For descing order use as list.sort(reverse=True)
+
+(v)list[0]- finds the 0th(1st) index in a list
+
+                                                                                  
 
