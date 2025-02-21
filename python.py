@@ -41,5 +41,27 @@ for i in range(start,end, -1):
 
 (v)list[0]- finds the 0th(1st) index in a list
 
+
+#Dictionary
+(i)d["hey"chat]=1 - This is how to add a key value pair to a dictionary
+
+(iimy_dict.update({'grape': 7})- This is how to add a key value pair to a dictionary
+
+(iii)my_dict = {**my_dict, 'mango': 4}-  This is how to add a key value pair to a dictionary
+
+(iv) for key,value in dict.items():- Iterate through key and value in a dictionary
+    dict[key.upper()]=value
+
+(v)dict.get("banana")- finds value associated with key
+
+(vi)max/min(dict,key=dict.get)- finds max or min value and returns the key
+
+
+#Strings
+
+1.string.split(" ")-Splits the string into different elements in form of a list
+
+
+
                                                                                   
 
