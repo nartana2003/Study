@@ -41,5 +41,11 @@ for i in range(start,end, -1):
 
 (v)list[0]- finds the 0th(1st) index in a list
 
+#Conversions
+(i)Convert string to list =string.split(" ")
+
+(ii) Convert list to string=" ".join(list)
+
+
                                                                                   
 
