@@ -1,1 +1,21 @@
+1.Importing necessary libraries 
+
+(i) import pandas as pd
+(ii)import sklearn
+(iii) import numpy as np
+(iv) import nltk
+
+2.Reading excel files using pandas
+pd.read_excel("File name/Path")
+pd.read_csv("File name/Path")
+
+
+3.Store data in the same folder as the Jupiter notebook to avoid copying file path
+
+4.Using pandas to read first 5 and last 5 rows of dataset
+(i)df.head()
+(ii)df.tail()
+
+5.Type of data in each column
+(i)df.columns
 
