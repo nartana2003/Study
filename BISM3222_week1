@@ -16,6 +16,39 @@ pd.read_csv("File name/Path")
 (i)df.head()
 (ii)df.tail()
 
-5.Type of data in each column
+5.Type of data in each column using pandas
 (i)df.columns
+
+6.Filing null values using pd
+(i)df.fillna()
+
+7.Removing null values using pd
+(i)df.dropna()
+
+8.Drop duplicate data using pd
+(i)df.drop_duplicates()
+
+9.Using conditionals in pd
+(i)df[df['Age']>20] --- all rows with Age>20
+(ii)df[df['Payment Method'].isin(["cheque","cash"])] 
+
+10.Inspecting Data Structure using pd
+(i)df.columns # List all column names
+(ii)df.dtypes # Check data types of each column
+(iii)df.info() # Summary of DataFrame (columns, non-null values, memory usage)
+
+11.Checking Data Size using pd
+(i)df.shape # (Rows, Columns) - Total number of rows and columns
+(ii)df.size # Total number of elements (rows × columns)
+
+12.Generating Summary Statistics
+(i)df.describe() # Summary of numerical columns
+
+13.Identifying Missing Data
+(i)df.isnull() # Returns True for missing values
+(ii)df.isnull().sum() # Count missing values per column
+(iii)df.isnull().any() # Check if there are any missing values
+
+
+
 
