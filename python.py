@@ -41,6 +41,10 @@ for i in range(start,end, -1):
 
 (v)list[0]- finds the 0th(1st) index in a list
 
+(vi) List comprehension -
+
+    Eg: list1=[1,2,3,4]
+list2=[x**2 for x in list1]
 #Conversions
 (i)Convert string to list =string.split(" ")
 
