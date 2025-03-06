@@ -1,0 +1,11 @@
+1.Copy data frame into another data frame using pandas
+df1a=df.copy()
+
+2.Find the max and min for a column  in pandas
+max/min=df1a["Age"].max/min()
+
+3.Creating a new column in pandas
+d1a["Scaled_Age"] (new column name)= scaled_age
+
+
+
