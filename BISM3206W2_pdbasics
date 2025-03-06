@@ -8,4 +8,10 @@ max/min=df1a["Age"].max/min()
 d1a["Scaled_Age"] (new column name)= scaled_age
 
 
+4.Finding average
+dl1a["Age"].mean()
+
+5.Selecting particular rows and columns using loc function in pandas
+df1a.loc[100:500,["Age","Scaled_Age","Age_comparison"]]
+
 
