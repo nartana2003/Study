@@ -45,7 +45,11 @@ for i in range(start,end, -1):
 
     Eg: list1=[1,2,3,4]
 list2=[x**2 for x in list1]
+
 (vii)sorted(l1)- sorts a list
+
+(viii)
+
 #Conversions
 (i)Convert string to list =string.split(" ")
 
