@@ -1,0 +1,32 @@
+1.Convert a Pandas df to Numpy(only use for numerical data type)
+numercial_data=np.array(df[['Age','LastTransaction']])
+print(numercial_data)
+
+2.Convert a numpy array back to a pandas df with labels
+df_numeric=pd.DataFrame(numerical_data,columns=['Age','LastTransaction'])
+
+3.List comprehension
+#Format(action for item in items)
+square_num=[x**2 for x in range(10)]
+
+4.Data selction in pandas
+
+(i)Selecting a single column 
+df['Age']
+
+(ii) Selecting multiple  columns
+df[['Age','LastTransaction']]
+
+(iii)iloc= integer/label based location
+df.iloc[0:3,0]
+
+(iv)loc
+df.loc[0:3,["Age","LastTransaction"]]
+
+
+5.To not get a boolean value using conditionals
+df[df['Age']>30]
+df[(df['Gender' ]=='female') & (df['Churn']=='churn')]
+
+6.Preserving Data integrity is important 
+df1=df.copy()
