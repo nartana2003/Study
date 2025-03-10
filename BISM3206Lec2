@@ -30,3 +30,15 @@ df[(df['Gender' ]=='female') & (df['Churn']=='churn')]
 
 6.Preserving Data integrity is important 
 df1=df.copy()
+
+7.lambda function
+square=lambda x:x**2
+square(5)
+instead of 
+def square(x):
+return x**2
+print(square(5))
+
+
+
+
