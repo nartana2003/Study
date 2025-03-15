@@ -10,5 +10,16 @@ dissimilar to the objects in other clusters.
 
 1.K-mean clustering
 
-2.Hierarchicial clustering
+2.Hierarchicial clustering-Agglomerative and Divisive clustering
+
+Evaluation of clustering 
+1.Clustering tendency- determining if a given dataset has a non-random structure which would lead to meaningful clusters.  
+2.Measuring cluster quality-Silhouette coefficient
+
+Silhouette coefficient = b(o)-a(o)/max{a(o),b(o)}
+We want it to be high.This score is usually between 0 and 1. The closer it is to 1 the better the score and the closer it is to 0 the worse
+the score.
+
+Cluster variation should be low.
+
 
