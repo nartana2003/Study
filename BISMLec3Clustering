@@ -22,4 +22,11 @@ the score.
 
 Cluster variation should be low.
 
+#Silhouette score in python using sklearn
+from sklearn.metrics import silhouette_score
+silhouette_score(X,kMeansLabels,metric="euclidean"
+
+#Elbow method
+Way of picking the best cluster.
+
 
